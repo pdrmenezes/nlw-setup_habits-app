@@ -20,6 +20,9 @@ export function HabitDay({ date, defaultCompletedHabits = 0, availableHabits = 0
   const dayAndMoth = dayjs(date).format("DD/MM");
   const dayOfWeek = dayjs(date).format("dddd");
 
+  const today = dayjs().startOf("day").toDate();
+  const isToday = dayjs(date).isSame(today);
+
   function handleChangeInCompletedHabits(completedHabits: number) {
     setCompleted(completedHabits);
   }
@@ -36,6 +39,7 @@ export function HabitDay({ date, defaultCompletedHabits = 0, availableHabits = 0
             "bg-violet-700 border-violet-500": progressPercentage >= 40 && progressPercentage < 60,
             "bg-violet-600 border-violet-500": progressPercentage >= 60 && progressPercentage < 80,
             "bg-violet-500 border-violet-400": progressPercentage >= 80,
+            "border-white border-3": isToday,
           }
         )}
       />
