@@ -4,7 +4,7 @@ import { api } from "../lib/axios";
 import { generateRangeDatesFromYearStart } from "../utils/generate-range-dates-from-year-start";
 import { HabitDay } from "./HabitDay";
 
-const weekDays = ["D", "S", "T", "Q", "Q", "S", "S"];
+const weekDays = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
 const summaryDates = generateRangeDatesFromYearStart();
 
 const MINIMUM_WEEKS = 18;
@@ -31,7 +31,7 @@ export function HabitsSummary() {
       <div className="grid grid-rows-7 grid-flow-row gap-3">
         {weekDays.map((weekDay, i) => {
           return (
-            <div key={`${weekDay}-${i}`} className="text-zinc-400 text-xl font-bold h-10 w-10 flex items-center justify-center">
+            <div key={`${weekDay}-${i}`} className="text-zinc-400 text-l pr-5 font-bold h-10 w-10 flex items-center justify-center">
               {weekDay}
             </div>
           );

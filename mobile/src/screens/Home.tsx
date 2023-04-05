@@ -8,7 +8,7 @@ import { generateRangeDatesFromYearStart } from "../utils/generate-range-dates-f
 import { api } from "../lib/axios";
 import dayjs from "dayjs";
 
-const weekDays = ["D", "S", "T", "Q", "Q", "S", "S"];
+const weekDays = ["S", "M", "T", "W", "T", "F", "S"];
 const datesFromYearStart = generateRangeDatesFromYearStart();
 const MINIMUM_WEEKS = 18;
 const minimumSummaryDatesSize = MINIMUM_WEEKS * 5;
@@ -33,7 +33,7 @@ export function Home() {
       setSummary(response.data);
     } catch (error) {
       console.error(error);
-      Alert.alert("Oops - Fetch", "não foi possível carregar os dados de hábitos");
+      Alert.alert("Oops - Fetch", "Error fetching habits data");
     } finally {
       setLoading(false);
     }

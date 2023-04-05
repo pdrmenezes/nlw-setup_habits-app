@@ -5,10 +5,10 @@ export function EmptyHabitsList() {
   const { navigate } = useNavigation();
   return (
     <Text className="text-zinc-400 text-base">
-      Nenhum hábito monitorado para hoje.
+      No habits for today.
       {"\n"}
       <Text className="text-violet-400 text-base underline active:text-violet-500" onPress={() => navigate("newHabit")}>
-        Que tal cadastrar um?
+        How about adding one?
       </Text>
     </Text>
   );

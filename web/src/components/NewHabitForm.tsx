@@ -3,7 +3,7 @@ import { Check } from "phosphor-react";
 import { FormEvent, useState } from "react";
 import { api } from "../lib/axios";
 
-const availableWeekDays = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"];
+const availableWeekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 export function NewHabitForm() {
   const [habitTitle, setHabitTitle] = useState("");
@@ -22,7 +22,7 @@ export function NewHabitForm() {
 
     setHabitTitle("");
     setHabitWeekDays([]);
-    alert("Hábito criado com sucesso");
+    alert("Habit successfully created!");
   }
 
   function handleToggleWeekDay(weekDay: number) {
@@ -38,20 +38,20 @@ export function NewHabitForm() {
   return (
     <form onSubmit={handleCreateNewHabit} className="w-full flex flex-col mt-6 ">
       <label htmlFor="title" className="font-semibold leading-tight">
-        Qual seu comprometimento?
+        What will your new habit be?
       </label>
       <input
         type="text"
         name="title"
         id="title"
-        placeholder="ex: Exercício, Sono, etc."
+        placeholder="e.g.: Exercise, Sleep, etc."
         className="p-4 rounded-lg mt-12 bg-zinc-800 text-white placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-violet-600 focus:ring-offset-2 focus:ring-offset-zinc-900"
         autoFocus
         onChange={(event) => setHabitTitle(event.target.value)}
         value={habitTitle}
       />
       <label htmlFor="" className="font-semibold leading-tight mt-4">
-        Qual a recorrência?
+        When?
       </label>
       <div className="flex flex-col gap-2 mt-3">
         {availableWeekDays.map((weekDay, index) => {
@@ -77,7 +77,7 @@ export function NewHabitForm() {
         className="mt-6 rounded-lg p-4 flex items-center justify-center gap-3 font-semibold bg-green-600 hover:bg-green-500 transition-colors focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2 focus:ring-offset-zinc-800"
       >
         <Check size={20} weight="bold" />
-        Confirmar
+        Add Habit
       </button>
     </form>
   );

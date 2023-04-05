@@ -17,7 +17,7 @@ export function Header() {
         onPress={() => navigate("newHabit")}
       >
         <Feather name="plus" color={colors.violet[500]} size={20} />
-        <Text className="text-white ml-3 font-space_semibold text-base">Novo</Text>
+        <Text className="text-white ml-3 font-space_semibold text-base">New</Text>
       </TouchableOpacity>
     </View>
   );

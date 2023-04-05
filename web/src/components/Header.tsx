@@ -13,7 +13,7 @@ export function Header() {
           className="border border-violet-500 font-semibold rounded-lg px-6 py-4 flex items-center gap-3 hover:border-violet-300 transition-colors focus:outline-none focurs:ring-2  focus:ring-offset-2 focus:ring-offset-background focus:ring-2 focus:ring-violet-600 focus:ring-offset-nlw_background"
         >
           <Plus size={20} className="text-violet-500" />
-          Novo Hábito
+          New Habit
         </Dialog.Trigger>
         <Dialog.Portal>
           <Dialog.Overlay className="w-screen h-screen bg-black/80 fixed inset-0" />
@@ -21,7 +21,7 @@ export function Header() {
             <Dialog.Close className="absolute right-6 top-6 rounded-md text-zinc-400 hover:text-zinc-200 focus:outline-none focus:ring-2 focus:ring-violet-600 focus:ring-offset-2 focus:ring-offset-zinc-800">
               <X size={24} aria-label="Fechar" />
             </Dialog.Close>
-            <Dialog.Title className="text-3xl leading-tight font-extrabold">Criar hábito</Dialog.Title>
+            <Dialog.Title className="text-3xl leading-tight font-extrabold">Create habit</Dialog.Title>
             <NewHabitForm />
           </Dialog.Content>
         </Dialog.Portal>

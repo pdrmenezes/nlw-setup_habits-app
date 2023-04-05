@@ -44,7 +44,7 @@ export function Habit() {
       setCompletedHabits(response.data.completedHabits);
     } catch (error) {
       console.log(error);
-      Alert.alert("Hábitos", "Não foi possível carregar a lista de hábitos");
+      Alert.alert("Habits", "Error loading habits list");
     } finally {
       setLoading(false);
     }
@@ -60,7 +60,7 @@ export function Habit() {
       }
     } catch (error) {
       console.log(error);
-      Alert.alert("Hábito", "Não foi possível atualizar o status do hábito");
+      Alert.alert("Habit", "Error updating habit's status");
     }
   }
 
@@ -97,7 +97,7 @@ export function Habit() {
             <EmptyHabitsList />
           )}
         </View>
-        {isDateInPast && <Text className="text-zinc-500 mt-10 text-center">Você não pode editar hábitos de datas passadas</Text>}
+        {isDateInPast && <Text className="text-zinc-500 mt-10 text-center">Sorry, it's not possible to edit past habits</Text>}
       </ScrollView>
     </View>
   );
