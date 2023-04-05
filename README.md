@@ -43,3 +43,5 @@ Aplicação com interface web e mobile (Android e iOS) para rastreamento e acomp
 - React Navigation
 - Dayjs
 - Axios
+
+![](https://github.com/pdrmenezes/nlw-setup_habits-app/blob/main/app-demo.gif)
